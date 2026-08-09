@@ -11,25 +11,16 @@
                     description: 'A mobile-first ferry schedule app for Island Shipping Corporation. It covers RORO routes between Cebu, Bantayan Island, Masbate, and Negros. Built with Laravel, Inertia.js, and React, then compiled to Android using NativePHP. Key features include real-time schedule scraping with Puppeteer, a fare calculator, and offline-first SQLite storage for reliable access without an internet connection.',
                     tags: ['Laravel', 'React', 'Inertia.js', 'NativePHP', 'SQLite', 'Android', 'Puppeteer'],
                     demo: '#',
-                    github: '#'
+                    github: 'https://github.com/danmedallo/Islandhip'
                 },
-                'ai-todo': {
-                    title: 'AI-Powered Todo App',
-                    icon: '🤖',
-                    iconBg: '#f0fdf4',
-                    description: 'A smart task manager that integrates with the Claude API. Users can input tasks in natural language, and the AI automatically breaks them down into actionable steps, assigns categories, and prioritizes them. Built with vanilla HTML, CSS, and JavaScript — a lightweight, zero-dependency showcase of AI-assisted productivity.',
-                    tags: ['JavaScript', 'Claude API', 'Vanilla JS'],
-                    demo: '#',
-                    github: '#'
-                },
-                'innoland': {
-                    title: 'Innoland Dev Platform',
-                    icon: '🏗️',
-                    iconBg: '#fdf4ff',
-                    description: 'An internal system developed for Innoland Development Corp. This platform powers business-critical workflows for real estate and property management. It features a robust PHP/Laravel backend, clean database architecture, and reliable reporting tools that streamline daily operations across multiple departments.',
-                    tags: ['PHP', 'Laravel', 'System Dev'],
-                    demo: '#',
-                    github: '#'
+                'tasky-cli': {
+                    title: 'tasky-cli — CLI Todo App',
+                    icon: '⌨️',
+                    iconBg: '#fff7ed',
+                    description: 'An open-source command-line task manager published to npm. Add, list, edit, complete, and delete tasks without leaving the terminal — supports batch operations and local JSON persistence.',
+                    tags: ['Node.js', 'npm', 'CLI'],
+                    demo: 'https://www.npmjs.com/package/tasky-cli',
+                    github: 'https://github.com/dan-medalllojr/tasky-cli'
                 }
             };
 
