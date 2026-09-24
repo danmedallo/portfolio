@@ -8,9 +8,9 @@
                     title: 'IslandShip — Ferry Schedule App',
                     icon: '⛴️',
                     iconBg: '#eff6ff',
-                    description: 'A mobile-first ferry schedule app for Island Shipping Corporation. It covers RORO routes between Cebu, Bantayan Island, Masbate, and Negros. Built with Laravel, Inertia.js, and React, then compiled to Android using NativePHP. Key features include real-time schedule scraping with Puppeteer, a fare calculator, and offline-first SQLite storage for reliable access without an internet connection.',
-                    tags: ['Laravel', 'React', 'Inertia.js', 'NativePHP', 'SQLite', 'Android', 'Puppeteer'],
-                    demo: '#',
+                    description: 'Ferry schedules for RORO routes between Cebu, Bantayan Island, Masbate and Negros, built with Laravel, Inertia.js and React. It installs to a phone as a progressive web app and keeps working without a signal: a service worker serves the pages already opened, which matters at piers where coverage drops. Booking is deliberately left online-only, since seats are confirmed live. The timetable refreshes itself weekly from the source timetable API, guarded so a repeated run cannot overwrite good data, and the whole thing ships as a Docker image on Render with Postgres.',
+                    tags: ['Laravel', 'React', 'Inertia.js', 'PWA', 'Service Worker', 'PostgreSQL', 'Docker', 'Render'],
+                    demo: 'https://islandhip-q6tq.onrender.com',
                     github: 'https://github.com/danmedallo/Islandhip'
                 },
                 'tasky-cli': {
@@ -91,6 +91,8 @@
             // click on project cards (excluding add-card)
             document.querySelectorAll('.project-card[data-project-id]').forEach(function(card) {
                 card.addEventListener('click', function(e) {
+                    // let a real link inside the card do its own thing
+                    if (e.target.closest('a')) return;
                     var id = this.getAttribute('data-project-id');
                     if (id) openModal(id);
                 });

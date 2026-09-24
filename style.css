@@ -536,6 +536,16 @@
             transition: color var(--transition), border-color var(--transition);
             pointer-events: none;
         }
+        /* the badges are decorative, except where one is a real link */
+        a.project-link {
+            pointer-events: auto;
+            text-decoration: none;
+            color: var(--c-ink);
+        }
+        a.project-link:hover,
+        a.project-link:focus-visible {
+            border-color: var(--c-ink);
+        }
         .project-card h3 {
             font-size: clamp(13px, 2.5vw, 15px);
             font-weight: 600;
