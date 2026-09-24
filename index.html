@@ -41,7 +41,7 @@
         <a href="#projects" class="mob-link">Projects</a>
         <a href="#services" class="mob-link">Services</a>
         <a href="#experience" class="mob-link">Experience</a>
-        <a href="#testimonials" class="mob-link">Testimonials</a>
+        <!-- <a href="#testimonials" class="mob-link">Testimonials</a> -->
         <a href="#contact" class="mob-link">Let's talk →</a>
     </div>
 
@@ -51,16 +51,16 @@
             <div class="hero-grid">
                 <div>
                     <div class="available-badge"><span class="pulse"></span>Available for projects</div>
-                    <div class="hero-tag">Web &amp; Mobile Developer</div>
+                    <div class="hero-tag">Full-Stack Web Developer</div>
                     <h1>Danilo Medallo Jr.</h1>
-                    <p>I build clean, fast, and reliable web and mobile applications. Specializing in PHP/Laravel with React frontends — from architecture to deployment, I help turn ideas into real products.</p>
+                    <p>I build and ship web apps with Laravel and React, from the database to deployment — and I take small projects too: a landing page, an internal tool, or a fix to an app you already run.</p>
                     <div class="hero-btns">
                         <a class="btn-primary" href="#projects">View my work</a>
                         <a class="btn-secondary" href="#contact">Get in touch</a>
                     </div>
                     <div class="hero-stats">
-                        <div><div class="stat-val">5+</div><div class="stat-label">Years experience</div></div>
-                        <div><div class="stat-val">10+</div><div class="stat-label">Projects shipped</div></div>
+                        <div><div class="stat-val">3+</div><div class="stat-label">Years experience</div></div>
+                        <div><div class="stat-val" id="projectCount">2</div><div class="stat-label">Projects shipped</div></div>
                         <div><div class="stat-val">2</div><div class="stat-label">Companies</div></div>
                     </div>
                 </div>
@@ -82,28 +82,22 @@
                 <div class="skill-section-label">Backend</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#f97316"></span>PHP</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#ff2d20"></span>Laravel</div>
+                <div class="skill-chip"><span class="skill-dot" style="background:#d33c43"></span>CakePHP</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#3b82f6"></span>MySQL</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#336791"></span>PostgreSQL</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#6366f1"></span>REST APIs</div>
 
                 <div class="skill-section-label">Frontend</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#61dafb"></span>React</div>
+                <div class="skill-chip"><span class="skill-dot" style="background:#42b883"></span>Vue.js</div>
+                <div class="skill-chip"><span class="skill-dot" style="background:#dd0031"></span>Angular</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#7e57c2"></span>Inertia.js</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#f59e0b"></span>JavaScript</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#06b6d4"></span>Tailwind CSS</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#646cff"></span>Vite</div>
-
-                <div class="skill-section-label">Progressive Web</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#5a0fc8"></span>PWA</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#0ea5e9"></span>Service Workers</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#10b981"></span>Offline-first</div>
-
-                <div class="skill-section-label">Mobile</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#ec4899"></span>NativePHP</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#3ddc84"></span>Android</div>
 
                 <div class="skill-section-label">Tools &amp; Deploy</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#f05032"></span>Git</div>
+                <div class="skill-chip"><span class="skill-dot" style="background:#646cff"></span>Vite</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#5fa04e"></span>Node.js</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#2496ed"></span>Docker</div>
             </div>
@@ -120,6 +114,8 @@
             <div class="projects-grid">
                 <!-- IslandShip -->
                 <div class="project-card featured" data-project-id="islandship">
+                    <img class="project-shot" src="./islandship.jpg" width="1200" height="750" loading="lazy" alt="IslandShip home page in a desktop browser, with the schedule list open on a phone" />
+                    <div class="project-body">
                     <div class="project-top">
                         <div class="project-icon" style="background:#eff6ff">⛴️</div>
                         <div class="project-links">
@@ -128,23 +124,25 @@
                         </div>
                     </div>
                     <h3>IslandShip — Ferry Schedule App</h3>
-                    <p>Ferry schedules for RORO routes between Cebu, Bantayan Island, Masbate and Negros. An installable PWA that keeps working without a signal — passengers can check departures at the pier where coverage drops. Schedules refresh themselves weekly from the operator's timetable.</p>
+                    <p>Ferry passengers lose signal at the pier, so I built a schedule app for Cebu–Bantayan–Masbate–Negros routes that installs to their phone and works offline — Laravel, React and PostgreSQL.</p>
                     <div class="project-tags">
                         <span class="tag">Laravel</span><span class="tag">React</span><span class="tag">Inertia.js</span><span class="tag">PWA</span><span class="tag">Service Worker</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag gray">Render</span>
+                    </div>
                     </div>
                 </div>
 
                 <!-- tasky-cli -->
                 <div class="project-card" data-project-id="tasky-cli">
+                    <img class="project-shot" src="./tasky-cli.png" width="1200" height="750" loading="lazy" alt="Terminal session adding, completing and listing tasks with tasky" />
                     <div class="project-top">
                         <div class="project-icon" style="background:#fff7ed">⌨️</div>
                         <div class="project-links">
                             <span class="project-link">CLI Tool</span>
-                            <span class="project-link">Published on npm</span>
+                            <a class="project-link" href="https://www.npmjs.com/package/tasky-cli" target="_blank" rel="noopener noreferrer">npm ↗</a>
                         </div>
                     </div>
                     <h3>tasky-cli — CLI Todo App</h3>
-                    <p>Open-source command-line task manager published to npm. Add, list, edit, complete, and delete tasks without leaving the terminal — supports batch operations and local JSON persistence.</p>
+                    <p>Tracking tasks meant leaving the terminal, so I built a todo CLI with batch commands and local JSON storage — Node.js, published on npm.</p>
                     <div class="project-tags">
                         <span class="tag">Node.js</span><span class="tag">npm</span><span class="tag gray">CLI</span>
                     </div>
@@ -169,9 +167,9 @@
             <h2>What I can help with</h2>
             <div class="services-grid">
                 <div class="service-card"><div class="service-icon">🌐</div><h3>Web Development</h3><p>Full-stack web apps using Laravel and React. From simple landing pages to complex multi-role SaaS platforms.</p></div>
-                <div class="service-card"><div class="service-icon">📱</div><h3>Mobile App Development</h3><p>Android apps built with NativePHP and React — ship a mobile product without leaving the PHP/Laravel stack.</p></div>
+                <div class="service-card"><div class="service-icon">📱</div><h3>Progressive Web Apps</h3><p>Installable web apps that keep working offline through service workers — one codebase on every phone, no app store needed.</p></div>
                 <div class="service-card"><div class="service-icon">🔌</div><h3>API &amp; Backend Systems</h3><p>RESTful API design, database architecture, and backend logic. Clean, well-structured code that scales.</p></div>
-                <div class="service-card"><div class="service-icon">🕷️</div><h3>Web Scraping &amp; Automation</h3><p>Data extraction pipelines using Puppeteer/Browsershot. Automate repetitive data collection tasks reliably.</p></div>
+                <div class="service-card"><div class="service-icon">🕷️</div><h3>Web Scraping &amp; Automation</h3><p>Pull data from websites and APIs on a schedule, cleaned and ready to use. Automate repetitive data collection tasks reliably.</p></div>
                 <div class="service-card"><div class="service-icon">🚀</div><h3>Deployment &amp; DevOps</h3><p>App deployment, server setup, and CI/CD configuration. From localhost to production, smoothly.</p></div>
                 <div class="service-card"><div class="service-icon">🔧</div><h3>Code Review &amp; Consulting</h3><p>Technical review of existing codebases, architecture advice, and hands-on help solving tough problems.</p></div>
             </div>
@@ -194,7 +192,7 @@
                     <div>
                         <div class="exp-title">Web Developer</div>
                         <div class="exp-company">Forty Degrees Celsius Inc.</div>
-                        <div class="exp-desc">Building and maintaining web and mobile applications. Leading development on client-facing products including IslandShip. Full-stack work across PHP/Laravel backends and React/Inertia.js frontends, with mobile deployments via NativePHP.</div>
+                        <div class="exp-desc">Building and maintaining web applications. Leading development on client-facing products. Full-stack work with Laravel and CakePHP on the backend, Vue.js and Angular on the frontend, and Tailwind CSS.</div>
                     </div>
                 </div>
                 <div class="exp-item">
@@ -215,6 +213,7 @@
     <hr class="section-divider" />
 
     <!-- ─── TESTIMONIALS ─── -->
+    <!-- hidden until real testimonials come in; to restore, fill in the cards and remove this comment
     <section id="testimonials">
         <div class="wrap">
             <div class="eyebrow">Testimonials</div>
@@ -242,6 +241,18 @@
     </section>
 
     <hr class="section-divider" />
+
+    Fill-in format (one per testimonial):
+
+    Quote:
+    Name:
+    Role:
+    Company:
+    Relationship: Client / Manager / Teammate / User
+    Credit as: Full name / First name + company / Initials only
+    Photo (optional):
+    LinkedIn (optional):
+    -->
 
     <!-- ─── CONTACT ─── -->
     <section id="contact">

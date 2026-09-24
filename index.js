@@ -20,6 +20,7 @@
                     description: 'An open-source command-line task manager published to npm. Add, list, edit, complete, and delete tasks without leaving the terminal — supports batch operations and local JSON persistence.',
                     tags: ['Node.js', 'npm', 'CLI'],
                     demo: 'https://www.npmjs.com/package/tasky-cli',
+                    demoLabel: 'View on npm',
                     github: 'https://github.com/dan-medalllojr/tasky-cli'
                 }
             };
@@ -60,7 +61,7 @@
                     demoBtn.href = data.demo;
                     demoBtn.target = '_blank';
                     demoBtn.rel = 'noopener';
-                    demoBtn.textContent = 'Live Demo';
+                    demoBtn.textContent = data.demoLabel || 'Live Demo';
                     modalActions.appendChild(demoBtn);
                 }
                 if (data.github) {
@@ -252,6 +253,12 @@
                     }
                 });
             });
+
+            // ── project count: only the projects shown on the page ──
+            var projectCount = document.getElementById('projectCount');
+            if (projectCount) {
+                projectCount.textContent = document.querySelectorAll('.project-card[data-project-id]').length;
+            }
 
             // ── add card keyboard ──
             var addCard = document.querySelector('.project-card.add-card');
