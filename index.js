@@ -22,6 +22,34 @@
                     demo: 'https://www.npmjs.com/package/tasky-cli',
                     demoLabel: 'View on npm',
                     github: 'https://github.com/dan-medalllojr/tasky-cli'
+                },
+                'mrs-system': {
+                    title: 'MRS System — Material Requisition',
+                    icon: '📋',
+                    iconBg: '#f0fdf4',
+                    description: 'An internal web system built at Innoland Development Corp. for Material Requisition Slips. Staff pick a project, project type and CIP account, add line items by searching item codes and descriptions, and can save a slip as a draft before submitting. Each submitted slip gets a request number and prints as a PDF through TCPDF. An admin panel covers a dashboard of all requests, user accounts and password resets, and the master data behind the form: projects, project codes, project types, CIP accounts and item classes.',
+                    tags: ['PHP', 'MySQL', 'PDF generation']
+                },
+                'smrt': {
+                    title: 'SMRT — Sales & Marketing Request Tracker',
+                    icon: '📌',
+                    iconBg: '#f5f3ff',
+                    description: 'An internal task tracker built at Innogroup for the Sales & Marketing team. Managers create tasks, assign them to staff with a due date and urgency level, reassign them, extend deadlines and mark them done or closed, and every change is kept in a task log. Access is split by role, so staff see only their own tasks. A scheduled cron job emails reminders as a due date approaches and again the day after it passes. Users can also set personal reminders that repeat daily, on weekdays or weekends, weekly, every two weeks, monthly, quarterly, twice a year or yearly.',
+                    tags: ['PHP', 'MySQL', 'Cron', 'Email']
+                },
+                'e-login': {
+                    title: 'e-Login — Field Attendance',
+                    icon: '📍',
+                    iconBg: '#ecfeff',
+                    description: 'A time-in / time-out web app for managers at a real estate company. Their work is often at a project site rather than the office, so instead of clocking in at a front desk they log in from their phone wherever the day starts. Each time-in and time-out captures the phone\'s GPS position through the browser Geolocation API, and the server turns the coordinates into a street address with OpenStreetMap\'s Nominatim service and keeps a Google Maps link to the exact spot. Admins see who has timed in and out today, manage accounts, and export attendance reports by date or by person to Excel.',
+                    tags: ['PHP', 'MySQL', 'Geolocation', 'OpenStreetMap']
+                },
+                'repair-request': {
+                    title: 'Repair Request — Ticketing System',
+                    icon: '🔧',
+                    iconBg: '#fef2f2',
+                    description: 'A repair ticketing system for a real estate company. Unit owners fill in a public request form with their development, unit number, case type, a description of the problem, the times their unit can be accessed and optional photos, and each request gets its own ticket number. The customer relations team reviews new tickets, then rejects them or assigns them to a handler with an urgency level. Handlers start the job and mark it done, and the ticket is closed or sent back if the work is not finished. Every ticket keeps a remarks thread, the system sends email and in-app notifications at each step, and it tracks waiting and aging time for reports by date, request type or staff member.',
+                    tags: ['PHP', 'MySQL', 'Email', 'Role-based access']
                 }
             };
 
