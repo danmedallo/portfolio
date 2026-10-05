@@ -13,6 +13,15 @@
                     demo: 'https://islandhip-q6tq.onrender.com',
                     github: 'https://github.com/danmedallo/Islandhip'
                 },
+                'dinkup': {
+                    title: 'Dinkup — Pickleball Games in Cebu',
+                    icon: '🏓',
+                    iconBg: '#f7fee7',
+                    description: 'A mobile-first app for finding pickleball games in Metro Cebu, written in TypeScript with React, Express and PostgreSQL. Players post a game at one of 22 hand-verified courts on a MapLibre map, or add a court that is missing, and others join within the game\'s capacity and skill level; guests can browse without an account. Players level up by winning, so the ladder is built to resist abuse: a win counts only when the loser confirms it, a third win over the same opponent within 30 days or a win over a lower level earns nothing, and row locks stop two confirmations from counting one result twice. Each rule has an API test. It installs from the browser with no app store, sends phone notifications through Web Push, and keeps a rolling week of labeled demo games and a one-click demo account so there is always something to try. Built by directing an AI assistant: the repo has the system design and a build log of every step, with the prompts, what the AI got right and what had to be fixed.',
+                    tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'PWA', 'MapLibre', 'Web Push', 'Render'],
+                    demo: 'https://dinkup.onrender.com/games',
+                    github: 'https://github.com/dan-medalllojr/dinkup'
+                },
                 'tasky-cli': {
                     title: 'tasky-cli — CLI Todo App',
                     icon: '⌨️',
