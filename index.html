@@ -8,6 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script>
+        // set the theme before first paint: the visitor's choice, else the system setting
+        (function() {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -17,20 +28,26 @@
     <nav class="nav" id="mainNav">
         <div class="nav-inner">
             <div class="nav-logo">dan<span>.</span>dev</div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="nav-cta" data-scroll="#contact">Let's talk</button>
+            <div class="nav-end">
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="nav-cta" data-scroll="#contact">Let's talk</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
         </div>
     </nav>
 
@@ -83,7 +100,7 @@
                 <div class="skill-chip"><span class="skill-dot" style="background:#f97316"></span>PHP</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#ff2d20"></span>Laravel</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#d33c43"></span>CakePHP</div>
-                <div class="skill-chip"><span class="skill-dot" style="background:#444444"></span>Express</div>
+                <div class="skill-chip"><span class="skill-dot" style="background:#8a8a8a"></span>Express</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#3b82f6"></span>MySQL</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#336791"></span>PostgreSQL</div>
                 <div class="skill-chip"><span class="skill-dot" style="background:#6366f1"></span>REST APIs</div>

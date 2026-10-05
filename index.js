@@ -150,6 +150,34 @@
                 }
             });
 
+            // ── theme switch ──
+            // the head script has already set data-theme; this keeps the button and later changes in sync
+            var themeToggle = document.getElementById('themeToggle');
+
+            function applyTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                var label = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+                themeToggle.setAttribute('aria-label', label);
+                themeToggle.title = label;
+            }
+
+            function savedTheme() {
+                try { return localStorage.getItem('theme'); } catch (e) { return null; }
+            }
+
+            applyTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+            themeToggle.addEventListener('click', function() {
+                var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                applyTheme(next);
+                try { localStorage.setItem('theme', next); } catch (e) {}
+            });
+
+            // follow the system setting until the visitor picks a theme
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                if (!savedTheme()) applyTheme(e.matches ? 'dark' : 'light');
+            });
+
             // ── hamburger ──
             var hamburger = document.getElementById('hamburger');
             var drawer = document.getElementById('mobileDrawer');
