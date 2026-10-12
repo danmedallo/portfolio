@@ -18,9 +18,17 @@
                     icon: '🏓',
                     iconBg: '#f7fee7',
                     description: 'A mobile-first app for finding pickleball games in Metro Cebu, written in TypeScript with React, Express and PostgreSQL. Players post a game at one of 22 hand-verified courts on a MapLibre map, or add a court that is missing, and others join within the game\'s capacity and skill level; guests can browse without an account. Players level up by winning, so the ladder is built to resist abuse: a win counts only when the loser confirms it, a third win over the same opponent within 30 days or a win over a lower level earns nothing, and row locks stop two confirmations from counting one result twice. Each rule has an API test. It installs from the browser with no app store, sends phone notifications through Web Push, and keeps a rolling week of labeled demo games and a one-click demo account so there is always something to try. Built by directing an AI assistant: the repo has the system design and a build log of every step, with the prompts, what the AI got right and what had to be fixed.',
-                    tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'PWA', 'MapLibre', 'Web Push', 'Render'],
+                    tags: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'PWA', 'MapLibre', 'Web Push', 'Render', 'AI-assisted'],
                     demo: 'https://dinkup.onrender.com/games',
                     github: 'https://github.com/dan-medalllojr/dinkup'
+                },
+                'pilaph': {
+                    title: 'PilaPH — Virtual Queue for Small Shops',
+                    icon: '🎫',
+                    iconBg: '#f0fdfa',
+                    description: 'A virtual queue for small Philippine businesses such as barbershops, clinics and small offices, built with Laravel, Inertia.js, React and TypeScript on PostgreSQL. Customers scan the shop\'s QR code, pick a service and get a ticket number like A-024 on their phone, with no app or account, then watch their place in line and the estimated wait update live through Supabase Realtime. The owner runs the queue from a phone, with call next, recall, no-show and done for each chair or counter, and gets push alerts when someone joins or the queue is almost full. Each shop also gets a printable QR poster, a TV "now serving" display on its own secret link, and stats on customers served, wait times, no-shows and busiest hours. It is built for a busy day: two customers joining at the same moment never get the same number, two counters calling at once never get the same customer, and a double-tapped Call next calls one person, each checked by tests that run real parallel processes. Nothing public shows a customer\'s name, and names are erased a week after the visit. Shops are on Free, Basic or Pro plans that set their limits on counters, monthly customers and stats history. It ships as one Docker image on Railway, and the live site\'s Try the demo button opens a sample barbershop that starts fresh every hour. Built AI-assisted, by directing an AI coding assistant.',
+                    tags: ['Laravel', 'React', 'TypeScript', 'Inertia.js', 'PostgreSQL', 'Supabase Realtime', 'PWA', 'Web Push', 'Docker', 'Railway', 'AI-assisted'],
+                    demo: 'https://pilaph-production.up.railway.app'
                 },
                 'tasky-cli': {
                     title: 'tasky-cli — CLI Todo App',
