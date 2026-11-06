@@ -30,6 +30,15 @@
                     tags: ['Laravel', 'React', 'TypeScript', 'Inertia.js', 'PostgreSQL', 'Supabase Realtime', 'PWA', 'Web Push', 'Docker', 'Railway', 'AI-assisted'],
                     demo: 'https://pilaph-production.up.railway.app'
                 },
+                'apexrace': {
+                    title: 'ApexRace — 3D Motorcycle Racing',
+                    icon: '🏍️',
+                    iconBg: '#fef2f2',
+                    description: 'A 3D motorcycle racing game that runs in the browser, installs as a web app, and ships as an iOS and Android app through Capacitor, built with React, TypeScript and Three.js (React Three Fiber). It has seven real circuits: Silverstone, Termas de Río Hondo, the Circuit of the Americas, Barcelona-Catalunya, Sepang, Suzuka and Spa-Francorchamps. Build scripts trace each one\'s racing line, walls and ground from a 3D model, including the bridge where Suzuka\'s figure of eight crosses itself, so a bike on the bridge and one underneath each ride their own road. Bikes lean up to 64° on tyres that warm up and wear, against AI riders at three difficulty levels. A race weekend has qualifying, track limits that cancel a lap for running wide, and personal bests kept for each circuit, wet and dry. Seven rounds make a championship scored like the real one, with a title screen at the end. Friends can race each other online in rooms with voice chat, and each race opens with TV-style shots of the grid and ends with highlight replays. Phones get lighter scenery so a race stays under a 40 MB download. The game logic is covered by 278 Vitest tests. Vibe coded with Claude Code: I set the direction and the features, sourced the 3D assets and tested every build, and the AI wrote the code.',
+                    tags: ['React', 'TypeScript', 'Three.js', 'React Three Fiber', 'Vite', 'Vitest', 'PWA', 'Capacitor', 'Vercel', 'Vibe coded'],
+                    demo: 'https://motogp-rouge.vercel.app/',
+                    demoLabel: 'Play it'
+                },
                 'tasky-cli': {
                     title: 'tasky-cli — CLI Todo App',
                     icon: '⌨️',
