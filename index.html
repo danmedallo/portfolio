@@ -441,8 +441,12 @@
                             <label class="form-label" for="formMessage">Message</label>
                             <textarea class="form-textarea" id="formMessage" placeholder="Tell me about your project..." required></textarea>
                         </div>
+                        <div class="form-hp" aria-hidden="true">
+                            <label for="formWebsite">Website</label>
+                            <input id="formWebsite" type="text" tabindex="-1" autocomplete="off" />
+                        </div>
                         <button class="form-submit" id="submitBtn" type="button">Send message</button>
-                        <div id="form-msg">✓ Message sent — I'll get back to you soon!</div>
+                        <div id="form-msg" role="status" aria-live="polite"></div>
                     </div>
                 </div>
             </div>

@@ -314,18 +314,51 @@
 
                 submitBtn.textContent = 'Sending…';
                 submitBtn.disabled = true;
+                formMsg.style.display = 'none';
 
-                setTimeout(function() {
-                    formInputs.forEach(function(i) { i.value = ''; });
-                    submitBtn.textContent = 'Send message';
-                    submitBtn.disabled = false;
-                    formMsg.style.display = 'block';
-                    clearErrors();
-                    setTimeout(function() {
-                        formMsg.style.display = 'none';
-                    }, 4000);
-                }, 1200);
+                var payload = {
+                    name: document.getElementById('formName').value.trim(),
+                    email: email.value.trim(),
+                    subject: document.getElementById('formSubject').value.trim(),
+                    message: document.getElementById('formMessage').value.trim(),
+                    website: document.getElementById('formWebsite').value
+                };
+
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                    .then(function(res) {
+                        return res.json().catch(function() { return {}; }).then(function(data) {
+                            if (!res.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
+                            return data;
+                        });
+                    })
+                    .then(function() {
+                        formInputs.forEach(function(i) { i.value = ''; });
+                        clearErrors();
+                        showFormMsg('✓ Message sent — I\'ll get back to you soon!', false);
+                    })
+                    .catch(function(err) {
+                        showFormMsg(err.message || 'Something went wrong. Please try again.', true);
+                    })
+                    .then(function() {
+                        submitBtn.textContent = 'Send message';
+                        submitBtn.disabled = false;
+                    });
             });
+
+            var formMsgTimer;
+            function showFormMsg(text, isError) {
+                clearTimeout(formMsgTimer);
+                formMsg.textContent = text;
+                formMsg.classList.toggle('is-error', isError);
+                formMsg.style.display = 'block';
+                formMsgTimer = setTimeout(function() {
+                    formMsg.style.display = 'none';
+                }, isError ? 6000 : 4000);
+            }
 
             document.querySelectorAll('#contactForm .form-input, #contactForm .form-textarea').forEach(function(i) {
                 i.addEventListener('keydown', function(e) {

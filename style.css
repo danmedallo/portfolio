@@ -988,6 +988,20 @@
             cursor: not-allowed;
             transform: none;
         }
+        #form-msg.is-error {
+            color: #ef4444;
+            background: rgba(239, 68, 68, .08);
+            border-color: rgba(239, 68, 68, .3);
+        }
+
+        .form-hp {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
         #form-msg {
             font-size: clamp(12px, 2vw, 13px);
             color: var(--c-success);
